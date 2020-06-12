@@ -9,14 +9,14 @@ namespace GerenciadorDeEventos
     class Controle
     {
         //classe para auxiliar na troca de dados
-        public bool estadoAcesso;
+        public bool estadoAcesso = false, estadoDados = false, estadoCadastro;
         public String mensagem = "";
 
-        public bool Acesso(String email, String senha)
+        public bool Acesso(String usuario, String senha)
         {
             //envia os dados do usuário para a verificação
             VerificarAcesso verificarAcesso = new VerificarAcesso();
-            estadoAcesso = verificarAcesso.Verifica(email, senha);
+            estadoAcesso = verificarAcesso.Verifica(usuario, senha);
 
             //se houver algum erro
             if (!verificarAcesso.Equals(""))
@@ -27,9 +27,24 @@ namespace GerenciadorDeEventos
             return estadoAcesso;
         }
 
-        public String Cadastro(String usuario, String email, String senha, String confSenha)
+        public bool Cadastro(String usuario, String email, String senha)
         {
-            return mensagem;
+            //envia os dados do usuário para a verificação
+            CriarCadastro criarCadastro = new CriarCadastro();
+            estadoDados = criarCadastro.Verifica(usuario, email);
+
+            if (estadoDados)
+            {
+                estadoCadastro = criarCadastro.Cadastra(usuario, email, senha);
+            }
+
+            //se houver algum erro
+            if (!criarCadastro.Equals(""))
+            {
+                this.mensagem = criarCadastro.mensagem;
+            }
+
+            return estadoCadastro;
         }
     }
 }

@@ -16,11 +16,11 @@ namespace GerenciadorDeEventos
         Conexao conexao = new Conexao();
         SqlDataReader dataReader;
 
-        public bool Verifica(String email, String senha)
+        public bool Verifica(String usuario, String senha)
         {
             //verifica se os dados recebidos existem no banco de dados
-            comando.CommandText = "select * from dados_usuarios where email = @email and senha = @senha";
-            comando.Parameters.AddWithValue("@email", email);
+            comando.CommandText = "select * from dados_usuarios where usuario = @usuario and senha = @senha";
+            comando.Parameters.AddWithValue("@usuario", usuario);
             comando.Parameters.AddWithValue("@senha", senha);
 
             try

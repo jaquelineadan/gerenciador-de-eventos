@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.acesso = new System.Windows.Forms.Button();
-            this.emailAcesso = new System.Windows.Forms.TextBox();
+            this.usuarioAcesso = new System.Windows.Forms.TextBox();
             this.senhaAcesso = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,13 +54,14 @@
             this.acesso.TabIndex = 0;
             this.acesso.Text = "Entrar";
             this.acesso.UseVisualStyleBackColor = true;
+            this.acesso.Click += new System.EventHandler(this.acesso_Click);
             // 
-            // emailAcesso
+            // usuarioAcesso
             // 
-            this.emailAcesso.Location = new System.Drawing.Point(69, 155);
-            this.emailAcesso.Name = "emailAcesso";
-            this.emailAcesso.Size = new System.Drawing.Size(107, 20);
-            this.emailAcesso.TabIndex = 1;
+            this.usuarioAcesso.Location = new System.Drawing.Point(69, 155);
+            this.usuarioAcesso.Name = "usuarioAcesso";
+            this.usuarioAcesso.Size = new System.Drawing.Size(107, 20);
+            this.usuarioAcesso.TabIndex = 1;
             // 
             // senhaAcesso
             // 
@@ -75,9 +76,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(66, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Email";
+            this.label1.Text = "Usuário";
             // 
             // label2
             // 
@@ -130,15 +131,16 @@
             this.cadastro.TabIndex = 5;
             this.cadastro.Text = "Cadastrar";
             this.cadastro.UseVisualStyleBackColor = true;
+            this.cadastro.Click += new System.EventHandler(this.cadastro_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(236, 178);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Email";
+            this.label5.Text = "E-mail";
             // 
             // label6
             // 
@@ -184,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 450);
+            this.ClientSize = new System.Drawing.Size(444, 450);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -199,7 +201,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.senhaAcesso);
-            this.Controls.Add(this.emailAcesso);
+            this.Controls.Add(this.usuarioAcesso);
             this.Controls.Add(this.acesso);
             this.Name = "Inicio";
             this.Text = "Gerenciador de Eventos";
@@ -211,7 +213,7 @@
         #endregion
 
         private System.Windows.Forms.Button acesso;
-        private System.Windows.Forms.TextBox emailAcesso;
+        private System.Windows.Forms.TextBox usuarioAcesso;
         private System.Windows.Forms.TextBox senhaAcesso;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
