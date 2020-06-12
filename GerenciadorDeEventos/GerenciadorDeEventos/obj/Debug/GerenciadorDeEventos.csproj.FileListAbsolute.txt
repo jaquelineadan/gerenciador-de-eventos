@@ -1,0 +1,10 @@
+C:\Users\jaque\source\repos\ProjetoGerenciadorDeEventos\GerenciadorDeEventos\GerenciadorDeEventos\bin\Debug\GerenciadorDeEventos.exe.config
+C:\Users\jaque\source\repos\ProjetoGerenciadorDeEventos\GerenciadorDeEventos\GerenciadorDeEventos\bin\Debug\GerenciadorDeEventos.exe
+C:\Users\jaque\source\repos\ProjetoGerenciadorDeEventos\GerenciadorDeEventos\GerenciadorDeEventos\bin\Debug\GerenciadorDeEventos.pdb
+C:\Users\jaque\source\repos\ProjetoGerenciadorDeEventos\GerenciadorDeEventos\GerenciadorDeEventos\obj\Debug\GerenciadorDeEventos.csprojAssemblyReference.cache
+C:\Users\jaque\source\repos\ProjetoGerenciadorDeEventos\GerenciadorDeEventos\GerenciadorDeEventos\obj\Debug\GerenciadorDeEventos.Inicio.resources
+C:\Users\jaque\source\repos\ProjetoGerenciadorDeEventos\GerenciadorDeEventos\GerenciadorDeEventos\obj\Debug\GerenciadorDeEventos.Properties.Resources.resources
+C:\Users\jaque\source\repos\ProjetoGerenciadorDeEventos\GerenciadorDeEventos\GerenciadorDeEventos\obj\Debug\GerenciadorDeEventos.csproj.GenerateResource.cache
+C:\Users\jaque\source\repos\ProjetoGerenciadorDeEventos\GerenciadorDeEventos\GerenciadorDeEventos\obj\Debug\GerenciadorDeEventos.csproj.CoreCompileInputs.cache
+C:\Users\jaque\source\repos\ProjetoGerenciadorDeEventos\GerenciadorDeEventos\GerenciadorDeEventos\obj\Debug\GerenciadorDeEventos.exe
+C:\Users\jaque\source\repos\ProjetoGerenciadorDeEventos\GerenciadorDeEventos\GerenciadorDeEventos\obj\Debug\GerenciadorDeEventos.pdb
