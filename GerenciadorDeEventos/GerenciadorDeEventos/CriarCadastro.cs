@@ -15,20 +15,23 @@ namespace GerenciadorDeEventos
 
         public bool Verifica(String usuario, String email)
         {
-            SqlCommand comando = new SqlCommand();
+            SqlCommand comando1 = new SqlCommand();
+            SqlCommand comando2 = new SqlCommand();
             Conexao conexao = new Conexao();
             SqlDataReader dataReader;
 
             //verifica se os dados recebidos existem no banco de dados
-            comando.CommandText = "select * from dados_usuarios where usuario = @usuario and email = @email";
-            comando.Parameters.AddWithValue("@usuario", usuario);
-            comando.Parameters.AddWithValue("@email", email);
+            comando1.CommandText = "select * from dados_usuarios where usuario = @usuario";
+            comando2.CommandText = "select * from dados_usuarios where email = @email";
+            comando1.Parameters.AddWithValue("@usuario", usuario);
+            comando2.Parameters.AddWithValue("@email", email);
 
             try
             {
-                //tenta abrir um conexao
-                comando.Connection = conexao.AbrirConexao();
-                dataReader = comando.ExecuteReader();
+                //tenta abrir uma conexao
+                comando1.Connection = conexao.AbrirConexao();
+                comando2.Connection = conexao.AbrirConexao();
+                dataReader = comando1.ExecuteReader();
 
                 //se os dados do usuário existirem
                 if (dataReader.HasRows)
@@ -36,6 +39,13 @@ namespace GerenciadorDeEventos
                     estadoDados = false;
                 }
                 dataReader.Close();
+                dataReader = comando2.ExecuteReader();
+
+                if(dataReader.HasRows)
+                {
+                    estadoDados = false;
+                }
+
             }
             catch (SqlException)
             {
@@ -50,7 +60,6 @@ namespace GerenciadorDeEventos
         {
             SqlCommand comando = new SqlCommand();
             Conexao conexao = new Conexao();
-            SqlDataReader dataReader;
 
             //insere os dados recebidos no banco de dados
             comando.CommandText = "insert into dados_usuarios values (@usuario, @email, @senha)";
@@ -62,14 +71,9 @@ namespace GerenciadorDeEventos
             {
                 //tenta abrir um conexao
                 comando.Connection = conexao.AbrirConexao();
-                dataReader = comando.ExecuteReader();
+                comando.ExecuteReader();
 
-                //se os dados do usuário existirem
-                if (dataReader.HasRows)
-                {
-                    estadoCadastro = true;
-                }
-                dataReader.Close();
+                estadoCadastro = true;
             }
             catch (SqlException)
             {
